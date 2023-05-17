@@ -1,0 +1,21 @@
+<form action="{{ routes.search_url }}" method="get" role="search" class="search">
+  <div class="field relative flex items-center">
+    <input
+      type="search"
+      name="q"
+      id="nav-search-input"
+      class="field__input w-full p-2 border"
+      value="{{ search.terms | escape }}"
+      placeholder="{{ 'general.search.search' | t }}"
+    >
+    <label for="nav-search-input" class="field__label sr-only">{{ 'general.search.search' | t }}</label>
+    <input type="hidden" name="options[prefix]" value="last">
+    <button
+      type="button"
+      class="search__button absolute right-0"
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      {% render 'icon-search', class: 'w-10' %}
+    </button>
+  </div>
+</form>

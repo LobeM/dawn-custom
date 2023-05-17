@@ -1,6 +1,6 @@
 {% for block in section.blocks %}
   <div
-    class="{{ section.settings.text_align }}"
+    class="py-3 {{ section.settings.text_align }}"
     style="background-color: {{ block.settings.bg_color }}; color: {{ block.settings.text_color }}"
   >
     {{ block.settings.text }}
@@ -28,7 +28,8 @@
           "value": "text-right",
           "label": "Text right"
         }
-      ]
+      ],
+      "default": "text-center"
     }
   ],
   "max_blocks": 12,
